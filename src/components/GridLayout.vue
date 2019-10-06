@@ -274,7 +274,8 @@
                 };
             },
             onWindowResize: function () {
-                if (this.$refs !== null && this.$refs.item !== null && this.$refs.item !== undefined) {
+                if (this.$refs !== null && this.$refs.item !== null && this.$refs.item !== undefined
+                && this.$refs.item.offsetWidth.offsetWidth > 0) {
                     this.width = this.$refs.item.offsetWidth;
                 }
                 this.eventBus.$emit("resizeEvent");
