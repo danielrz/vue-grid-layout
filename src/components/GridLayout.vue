@@ -162,7 +162,8 @@
                     self.initResponsiveFeatures();
 
                     //self.width = self.$el.offsetWidth;
-                    addWindowEventListener('resize', self.onWindowResize);
+                    // console.log('!!!', { width: self.width, offsetWidth: self.$el.offsetWidth, itemOffsetWidth: self.$refs.item.offsetWidth});
+                    // addWindowEventListener('resize', self.onWindowResize);
 
                     compact(self.layout, self.verticalCompact);
 
@@ -274,8 +275,7 @@
                 };
             },
             onWindowResize: function () {
-                if (this.$refs !== null && this.$refs.item !== null && this.$refs.item !== undefined
-                && this.$refs.item.offsetWidth.offsetWidth > 0) {
+                if (this.$refs !== null && this.$refs.item !== null && this.$refs.item !== undefined) {
                     this.width = this.$refs.item.offsetWidth;
                 }
                 this.eventBus.$emit("resizeEvent");

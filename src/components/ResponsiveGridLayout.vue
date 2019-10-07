@@ -131,7 +131,7 @@
                     if (self.width === null) {
                         self.onWindowResize();
                         //self.width = self.$el.offsetWidth;
-                        addWindowEventListener('resize', self.onWindowResize);
+                        // addWindowEventListener('resize', self.onWindowResize);
                     }
                     compact(self.layout, self.verticalCompact);
 
@@ -180,7 +180,7 @@
                 if (self.width === null) {
                     self.onWindowResize();
                     //self.width = self.$el.offsetWidth;
-                    addWindowEventListener('resize', self.onWindowResize);
+                    // addWindowEventListener('resize', self.onWindowResize);
                 }
                 compact(self.layout, self.verticalCompact);
 
